@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+═══════════════════════════════════════════════════════════════════════
+404 → ROOT REDIRECT: CNIP-AGENCY.COM
+═══════════════════════════════════════════════════════════════════════
+
+Deze pagina vangt ALLE niet-bestaande URL's op en redirect naar root:
+- cnip-agency.com/test → cnip-agency.com
+- cnip-agency.com/whatever → cnip-agency.com  
+- cnip-agency.com/blog/post/123 → cnip-agency.com
+
+GitHub Pages laadt automatisch 404.html voor alle 404 errors!
+Dan redirect index.html naar oryen.be
+
+═══════════════════════════════════════════════════════════════════════
+-->
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- INSTANT REDIRECT NAAR ROOT -->
+    <script>
+        // Redirect ALLE paden naar root homepage
+        window.location.replace('/');
+    </script>
+    
+    <!-- Fallback: Meta refresh (als JavaScript uitstaat) -->
+    <meta http-equiv="refresh" content="0; url=/">
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .message {
+            text-align: center;
+            color: #5a6772;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e9ecef;
+            border-top-color: #C9A574;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <div class="spinner"></div>
+        <p>Redirecting...</p>
+    </div>
+</body>
+</html>
