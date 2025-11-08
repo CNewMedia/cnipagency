@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
+    <title>Redirecting to CNIP.be...</title>
+    <meta http-equiv="refresh" content="0;url=https://cnip.be">
     <script>
-        // Redirect naar cnip.be met behoud van pad en query parameters
-        window.location.replace("https://cnip.be" + window.location.pathname + window.location.search);
+        // Direct redirect met pad behoud
+        window.location.replace("https://cnip.be" + 
+            window.location.pathname + 
+            window.location.search + 
+            window.location.hash);
     </script>
+    <link rel="canonical" href="https://cnip.be">
 </head>
 <body>
-    <p>Aan het doorsturen naar cnip.be...</p>
+    <p>Je wordt doorgestuurd naar <a href="https://cnip.be">cnip.be</a>...</p>
 </body>
 </html>
